@@ -38,6 +38,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   smooth_page_indicator: ^1.0.0+2
   flutter_verification_code: ^1.1.6
+  carousel_slider: ^4.1.1
+  flutter_staggered_grid_view: ^0.6.2
 
 dev_dependencies:
   flutter_test:
@@ -95,6 +97,24 @@ flutter:
     - family: SemiBold
       fonts:
        - asset: fonts/Inter-SemiBold.ttf
+    - family: ExtraBold
+      fonts:
+       - asset: fonts/Inter-ExtraBold.ttf
+    - family: Light
+      fonts:
+      - asset: fonts/Inter-Light.ttf
+    - family: Robotobolod
+      fonts:
+      - asset: fonts/Roboto-Bold.ttf
+    - family: Robotoregular
+      fonts:
+      - asset: fonts/Roboto-Regular.ttf
+    - family: RobotoMedium
+      fonts:
+      - asset: fonts/Roboto-Medium.ttf
+    - family: RobotoBold
+      fonts:
+      - asset: fonts/Roboto-Bold.ttf
 
 
   # fonts:

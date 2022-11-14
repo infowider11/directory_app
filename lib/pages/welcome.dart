@@ -3,6 +3,7 @@ import 'package:directory_app/constants/colors.dart';
 import 'package:directory_app/constants/image_urls.dart';
 import 'package:directory_app/constants/size_box.dart';
 import 'package:directory_app/pages/sign_in.dart';
+import 'package:directory_app/pages/signup.dart';
 import 'package:directory_app/widgets/round_edged_button.dart';
 import 'package:flutter/material.dart';
 class WelcomePage extends StatefulWidget {
@@ -54,19 +55,19 @@ class _WelcomePageState extends State<WelcomePage> {
             onTap: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const WelcomePage()),
+                MaterialPageRoute(builder: (context) => const Sign_In()),
               );
             },
           ),
           RoundEdgedButton(
-            text: 'Login',
+            text: 'Create Account',
             textColor: MyColors.whiteColor,
             color: MyColors.introscreenheadcolor,
             width: 350,
             onTap: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Sign_In()),
+                MaterialPageRoute(builder: (context) => const Sign_Up()),
               );
             },
           ),

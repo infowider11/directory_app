@@ -16,8 +16,6 @@ class IntroPage extends StatefulWidget {
 
 class _IntroPageState extends State<IntroPage> {
   PageController controller = PageController();
-
-
   page0(){
 
     return Stack(
@@ -44,25 +42,24 @@ class _IntroPageState extends State<IntroPage> {
               children: [
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 0),
-                  child: MainHeadingText(text: ' Regístrate gratis',
-                    color: MyColors.introscreenheadcolor,
+                  child: MainHeadingText(text: ' Regístrate Gratis',
+                    color: MyColors.Primary,
                     textAlign: TextAlign.center,
-                    fontSize: 24,
-                    // fontWeight: FontWeight.bold,
-                    fontFamily: 'bold',
-                    height: 3.9,
+                    fontSize: 26,
+                    fontFamily: 'ExtraBold',
+
                   ),
                 ),
                 vSizedBox2,
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 13,),
+                  padding: EdgeInsets.symmetric(horizontal: 50,),
                   child: ParagraphText(
                     text: ("Regístrate para poder acceder a innumerables ofertas y descuentos procedentes de una selección de establecimientos cercanos."),
-                    color: MyColors.introscreentextcolor,
                     textAlign: TextAlign.center,
-                    fontSize: 19,
+                    color: MyColors.secondary,
+                    fontSize: 16,
                     fontFamily: 'regular',
-                    fontWeight: FontWeight.w500,
+
 
                   ),
                 ),
@@ -104,24 +101,25 @@ class _IntroPageState extends State<IntroPage> {
                 Container(
                   // padding: EdgeInsets.symmetric(horizontal: 16),
                   child: MainHeadingText(text: 'Busca Y Encuentra Ofertas ',
-                    color: MyColors.introscreenheadcolor,
+                    color: MyColors.Primary,
                     textAlign: TextAlign.center,
-                    fontSize: 24,
-                    // fontWeight: FontWeight.bold,
-                    fontFamily: 'bold',
+                    fontSize: 26,
+                    fontFamily: 'ExtraBold',
+
 
                   ),
                 ),
                 vSizedBox2,
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  padding: EdgeInsets.symmetric(horizontal: 40),
                   child: ParagraphText(
                     text: ("Selecciona las ofertas que te interesen, por tipo de negocio o por zona, de entre todos los establecimientos asociados."),
-                    color: MyColors.introscreentextcolor,
                     textAlign: TextAlign.center,
-                    fontSize: 19,
+                    color: MyColors.secondary,
+                    fontSize: 16,
                     fontFamily: 'regular',
-                    fontWeight: FontWeight.w500,
+                    lineheight:1.3,
+
 
                   ),
                 ),
@@ -162,24 +160,23 @@ class _IntroPageState extends State<IntroPage> {
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 16),
                   child: MainHeadingText(text: 'Usa los cupones',
-                    color: MyColors.introscreenheadcolor,
+                    color: MyColors.Primary,
                     textAlign: TextAlign.center,
-                    fontSize: 24,
-                    // fontWeight: FontWeight.bold,
-                    fontFamily: 'bold',
-                    height: 3.9,
+                    fontSize: 26,
+                    fontFamily: 'ExtraBold',
+
                   ),
                 ),
                 vSizedBox2,
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  padding: EdgeInsets.symmetric(horizontal:25),
                   child: ParagraphText(
                     text: (" Usa los cupones asociados a las ofertas y obtén numerosos descuentos especiales. "),
-                    color: MyColors.introscreentextcolor,
+                    color: MyColors.secondary,
                     textAlign: TextAlign.center,
-                    fontSize: 19,
+                    fontSize: 16,
                     fontFamily: 'regular',
-                    fontWeight: FontWeight.w500,
+
 
                   ),
                 ),
@@ -199,9 +196,11 @@ class _IntroPageState extends State<IntroPage> {
       backgroundColor: MyColors.whiteColor,
       body: SafeArea(
         child: Container(
-          child: Stack(
+          child:
+          Stack(
             alignment: Alignment.center,
             children: [
+
               PageView.builder(
                 itemCount: 3,
                 controller: controller,
@@ -214,8 +213,11 @@ class _IntroPageState extends State<IntroPage> {
                   }
                 },
               ),
+              // Positioned(
+              //   top:100,
+              //     child: Image.asset('${MyImages.applogo}')),
               Positioned(
-                bottom: 75,
+                bottom: 80,
                 // alignment: Alignment.center,
                 child: SmoothPageIndicator(
                     controller: controller,  // PageController
@@ -224,14 +226,15 @@ class _IntroPageState extends State<IntroPage> {
                         dotWidth: 10,
                         dotHeight: 10,
                         activeDotColor: MyColors.Primary,
-                        dotColor: MyColors.secondary
+                        dotColor: Color(0xff3FD4BE),
+                        paintStyle:PaintingStyle.stroke ,
+                      radius: 20
                     ),  // your preferred effect
                     onDotClicked: (index){
 
                     }
                 ) ,
               ),
-
               Positioned(
                 bottom: 20,
                 child: RoundEdgedButton(

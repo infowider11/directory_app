@@ -13,3 +13,4 @@ const SizedBox vSizedBox2 = SizedBox(height:20,);
 const SizedBox vSizedBox4 = SizedBox(height: 30,);
 const SizedBox vSizedBox6 = SizedBox(height: 60,);
 const SizedBox vSizedBox8 = SizedBox(height: 80,);
+const SizedBox wSizedBox05 = SizedBox(width: 5,);

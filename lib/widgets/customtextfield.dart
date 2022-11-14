@@ -85,7 +85,11 @@ class CustomTextField1 extends StatelessWidget {
   final Color bgColor;
   final double verticalPadding;
   final String? prefixIcon;
+  final String? suffixIcon;
   final TextAlign textAlign;
+  final double height;
+  final double hinttextfontsize;
+  final String? hinttextfontfamily;
 
   CustomTextField1({
     Key? key,
@@ -99,14 +103,20 @@ class CustomTextField1 extends StatelessWidget {
     this.bgColor = MyColors.whiteColor,
     this.verticalPadding = 4,
     this.prefixIcon,
+    this.suffixIcon,
+    this.hinttextfontsize=16,
+    this.hinttextfontfamily,
+
     this.textAlign = TextAlign.left,
-    this.enabled
+    this.enabled,
+    this.height=50,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 48,
+      height:height,
+
       margin: EdgeInsets.symmetric(
           horizontal: horizontalPadding ? 16 : 0, vertical: verticalPadding),
       decoration: BoxDecoration(
@@ -130,13 +140,24 @@ class CustomTextField1 extends StatelessWidget {
         textAlign: textAlign,
         decoration: InputDecoration(
           hintText: hintText,
-          hintStyle: TextStyle(fontSize: 16),
+          contentPadding:const EdgeInsets.only(top:15),
+          hintStyle: TextStyle(fontSize: hinttextfontsize,fontFamily: hinttextfontfamily),
           border: InputBorder.none,
           prefixIcon:prefixIcon==null?null:
           Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(14.0),
             child: Image.asset(
               prefixIcon!,
+              width: 10,
+              height: 10,
+              fit: BoxFit.fitHeight,
+            ),
+          ),
+          suffixIcon:suffixIcon==null?null:
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Image.asset(
+              suffixIcon!,
               width: 10,
               height: 10,
               fit: BoxFit.fitHeight,

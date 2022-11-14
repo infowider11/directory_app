@@ -55,8 +55,7 @@ class RoundEdgedButton extends StatelessWidget {
             style: TextStyle(
                 color:isSolid? textColor:color,
                 fontSize: 18,
-                fontFamily: 'regular',
-                fontWeight: FontWeight.w500
+                fontFamily: 'medium',
             ),
           ),
         ),

@@ -14,9 +14,16 @@ class _splashscreecState extends State<splashscreec> {
   void initState() {
     // TODO: implement initState
     Future.delayed(Duration(seconds:5)).then((value)  {
-      Navigator.push(
+      // Navigator.push(
+      //   context,
+      //   MaterialPageRoute(builder: (context) => const IntroPage()),
+      // );
+
+      Navigator.pushReplacement<void, void>(
         context,
-        MaterialPageRoute(builder: (context) => const IntroPage()),
+        MaterialPageRoute<void>(
+          builder: (BuildContext context) => const IntroPage(),
+        ),
       );
     });
     super.initState();
@@ -30,7 +37,7 @@ class _splashscreecState extends State<splashscreec> {
           padding: const EdgeInsets.all(0),
           child: Image.asset(
             MyImages.download,
-            height: 150,
+            height: 200,
             // width: MediaQuery.of(context).size.width-100,
             fit: BoxFit.contain,
           ),

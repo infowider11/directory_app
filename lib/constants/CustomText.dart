@@ -113,6 +113,7 @@ class ParagraphText extends StatelessWidget {
   final String text;
   final Color? color;
   final double? fontSize;
+  final double? lineheight;
   final double? letterSpacing;
   final FontWeight? fontWeight;
   final String? fontFamily;
@@ -128,6 +129,7 @@ class ParagraphText extends StatelessWidget {
     this.textAlign,
     this.underlined = false,
     this.letterSpacing,
+    this.lineheight,
   }) : super(key: key);
 
   @override
@@ -143,7 +145,8 @@ class ParagraphText extends StatelessWidget {
         fontFamily: fontFamily,
 
         decoration:underlined? TextDecoration.underline:null,
-        letterSpacing:letterSpacing
+        letterSpacing:letterSpacing,
+        height: lineheight,
       ),
     );
   }

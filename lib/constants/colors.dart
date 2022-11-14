@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 class MyColors{
-  // static const Color primaryColor = Color(0xFFE65C5C);
-  static const Color primaryColor = Color(0xFF004AAD);
+  static const Color primaryColor = Color(0xFFE65C5C);
+  // static const Color primaryColor = Color(0xFF004AAD);
   static const Color greyColor = Color(0xFFEEEEEE);
   static Color loginBorderColor = Color(0xFF1877F2).withOpacity(0.3);
   static const Color blueColor = Color(0xFF1877F2);
@@ -30,10 +30,11 @@ class MyColors{
   static Color labletextcolor = Color(0xFF575757);
   static Color subheadcolor = Color(0xFF545454);
   static Color textborder = Color(0xFFD7D7D7);
-
-
-
   static Color loginoptiontext = Color(0xFF0ECFFF);
+  static Color activeicon = Color(0xFF2E2E2E);
+  static Color container1bgcolor = Color(0xFFEEEEEE);
+  static Color container2bgcolor = Color(0xFF8AA5A7);
+
 
 
 
